@@ -1,0 +1,47 @@
+MACHINE ??= "evb-zx3-pm3"
+DISTRO ?= "openbmc-phosphor"
+PACKAGE_CLASSES ?= "package_rpm"
+SANITY_TESTED_DISTROS_append ?= " *"
+EXTRA_IMAGE_FEATURES = "debug-tweaks"
+USER_CLASSES ?= "buildstats image-mklibs image-prelink"
+PATCHRESOLVE = "noop"
+BB_DISKMON_DIRS = "\
+    STOPTASKS,${TMPDIR},1G,100K \
+    STOPTASKS,${DL_DIR},1G,100K \
+    STOPTASKS,${SSTATE_DIR},1G,100K \
+    STOPTASKS,/tmp,100M,100K \
+    ABORT,${TMPDIR},100M,1K \
+    ABORT,${DL_DIR},100M,1K \
+    ABORT,${SSTATE_DIR},100M,1K \
+    ABORT,/tmp,10M,1K"
+CONF_VERSION = "1"
+
+# Set the root password to '0penBmc'
+INHERIT += "extrausers"
+EXTRA_USERS_PARAMS = " \
+  usermod -p '\$1\$UGMqyqdG\$FZiylVFmRRfl9Z0Ue8G7e/' root; \
+  "
+
+# Xilinx specific variables
+# These have to be set in order for everything to work!
+
+# Device tree variables
+#
+# Since the Zynq chip has an FPGA, which can be programmed arbitrarily, the
+# device tree cannot be given as a static file. Because of that a device tree
+# generated from the hardware description is used. The device trees can be
+# generated with Vivado or by a standalone tool provided by Xilinx.
+
+# The location of the SDK project which contains the generated device tree.
+# If the Vivado SDK was used to generate the device tree, this variable can be
+# used to specify the SDK location (from which the device tree location will be
+# inferred via as "$VIVADO_SDK_LOCATION/device_tree_bsp_0")
+# Documentation on generating the device tree project can be found at
+# http://www.wiki.xilinx.com/Build+Device+Tree+Blob
+VIVADO_SDK_LOCATION = "~/workspace/Vivado_PM3/MarsZX3_PM3.sdk"
+
+# Alternatively to VIVADO_SDK_LOCATION, the location of the generated device
+# tree can be given directly.
+# This is useful when generating the device tree directly as documented in
+# http://www.wiki.xilinx.com/ZCU102%20Image%20creation%20in%20OSL%20flow#Build%20device-tree
+# XILINX_GENERATED_DEVICE_TREE_PROJECT_LOCATION = ""

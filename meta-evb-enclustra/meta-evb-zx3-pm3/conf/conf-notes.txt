@@ -1,0 +1,6 @@
+Please make sure you have either the VIVADO_SDK_LOCATION variable or the 
+XILINX_GENERATED_DEVICE_TREE_PROJECT_LOCATION variable set in local.conf.
+Otherwise the project won't build.
+
+Common targets are:
+     obmc-phosphor-image
