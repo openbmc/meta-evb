@@ -1,6 +1,6 @@
 # LAYER_CONF_VERSION is increased each time build/conf/bblayers.conf
 # changes incompatibly
-LCONF_VERSION = "6"
+LCONF_VERSION = "8"
 
 BBPATH = "${TOPDIR}"
 BBFILES ?= ""
@@ -13,9 +13,9 @@ BBLAYERS ?= " \
   ##OEROOT##/meta-openembedded/meta-python \
   ##OEROOT##/meta-phosphor \
   ##OEROOT##/meta-nuvoton \
-  ##OEROOT##/meta-openbmc-machines/meta-evb \
-  ##OEROOT##/meta-openbmc-machines/meta-evb/meta-evb-nuvoton \
-  ##OEROOT##/meta-openbmc-machines/meta-evb/meta-evb-nuvoton/meta-evb-npcm750 \
+  ##OEROOT##/meta-evb \
+  ##OEROOT##/meta-evb/meta-evb-nuvoton \
+  ##OEROOT##/meta-evb/meta-evb-nuvoton/meta-evb-npcm750 \
   "
 BBLAYERS_NON_REMOVABLE ?= " \
   ##OEROOT##/meta \
@@ -25,7 +25,7 @@ BBLAYERS_NON_REMOVABLE ?= " \
   ##OEROOT##/meta-openembedded/meta-python \
   ##OEROOT##/meta-phosphor \
   ##OEROOT##/meta-nuvoton \
-  ##OEROOT##/meta-openbmc-machines/meta-evb \
-  ##OEROOT##/meta-openbmc-machines/meta-evb/meta-evb-nuvoton \
-  ##OEROOT##/meta-openbmc-machines/meta-evb/meta-evb-nuvoton/meta-evb-npcm750 \
+  ##OEROOT##/meta-evb \
+  ##OEROOT##/meta-evb/meta-evb-nuvoton \
+  ##OEROOT##/meta-evb/meta-evb-nuvoton/meta-evb-npcm750 \
   "
