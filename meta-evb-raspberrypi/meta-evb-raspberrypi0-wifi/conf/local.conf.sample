@@ -1,4 +1,4 @@
-MACHINE ??= "raspberrypi"
+MACHINE = "raspberrypi0-wifi"
 DISTRO ?= "openbmc-phosphor"
 PACKAGE_CLASSES ?= "package_rpm"
 SANITY_TESTED_DISTROS_append ?= " *"
@@ -19,7 +19,21 @@ CONF_VERSION = "1"
 IMAGE_FSTYPES += "ext4 tar.xz"
 KERNEL_IMAGETYPE_UBOOT = "zImage"
 KERNEL_BOOTCMD = "bootz"
-FDTFILE = "${fdtfile}"
+FDTFILE = "bcm2708-rpi-0-w.dtb"
+RPI_UBOOT_CMD = "earlyprintk console=ttyAMA0 console=tty1 root=/dev/mmcblk0p2 rootfstype=ext4 rootwait"
+KERNEL_FILE = "u-boot.bin"
+ENABLE_UART = "1"
+DISABLE_SPLASH = "0"
+#ENABLE_I2C = "1"
+BOOT_DELAY = "1"
+
+# If you REALLY want a uImage
+#KERNEL_IMAGETYPE_UBOOT = "uImage"
+#KERNEL_BOOTCMD = "bootm"
+#RPI_USE_U_BOOT = "1"
+
+RPI_UBOOT_CMD = "earlyprintk console=ttyAMA0 console=tty0 root=/dev/mmcblk0p2 rootfstype=ext4 rootwait"
+
 FDT_LOAD_ADDR = "0x02000000"
 
 # Set the root password to '0penBmc'
@@ -27,7 +41,6 @@ INHERIT += "extrausers"
 EXTRA_USERS_PARAMS = " \
   usermod -p '\$1\$UGMqyqdG\$FZiylVFmRRfl9Z0Ue8G7e/' root; \
   "
-
 KERNEL_FEATURES_remove = "phosphor-gpio-keys"
 
 # Overwrite flash offsets

@@ -1,4 +1,4 @@
-MACHINE ??= "raspberrypi"
+MACHINE = "raspberrypi-cm3"
 DISTRO ?= "openbmc-phosphor"
 PACKAGE_CLASSES ?= "package_rpm"
 SANITY_TESTED_DISTROS_append ?= " *"
@@ -19,7 +19,14 @@ CONF_VERSION = "1"
 IMAGE_FSTYPES += "ext4 tar.xz"
 KERNEL_IMAGETYPE_UBOOT = "zImage"
 KERNEL_BOOTCMD = "bootz"
-FDTFILE = "${fdtfile}"
+FDTFILE = "bcm2710-rpi-cm3.dtb"
+RPI_UBOOT_CMD = "earlyprintk console=ttyAMA0 console=tty1 root=/dev/mmcblk0p2 rootfstype=ext4 rootwait"
+DTOVERLAY = "pi3-disable-bt"
+KERNEL_FILE = "u-boot.bin"
+ENABLE_UART = "1"
+DISABLE_SPLASH = "1"
+ENABLE_I2C = "1"
+
 FDT_LOAD_ADDR = "0x02000000"
 
 # Set the root password to '0penBmc'
@@ -27,7 +34,6 @@ INHERIT += "extrausers"
 EXTRA_USERS_PARAMS = " \
   usermod -p '\$1\$UGMqyqdG\$FZiylVFmRRfl9Z0Ue8G7e/' root; \
   "
-
 KERNEL_FEATURES_remove = "phosphor-gpio-keys"
 
 # Overwrite flash offsets
