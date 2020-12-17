@@ -1,0 +1,113 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "d738302d_7fdbac07",
+        "filename": "meta-evb-aspeed/meta-evb-ast2600/README.md",
+        "patchSetId": 3
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1000002
+      },
+      "writtenOn": "2020-12-17T17:35:54Z",
+      "side": 1,
+      "message": "The title should have \"OpenBMC\" in it somewhere I think.  How about this:\n\n Convenience layer for building OpenBMC on the AST2600 EVB\n\n This layer allows you to build OpenBMC for the AST2600 EVB in the Aspeed BSP layer without having to manually configure bblayers.conf and local.conf.",
+      "range": {
+        "startLine": 1,
+        "startChar": 0,
+        "endLine": 1,
+        "endChar": 31
+      },
+      "revId": "0b7a837986572553d8dfee20a7c014bf14c50f12",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "3f1a389a_ac4fb2fe",
+        "filename": "meta-evb-aspeed/meta-evb-ast2600/README.md",
+        "patchSetId": 3
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1000002
+      },
+      "writtenOn": "2020-12-17T17:35:54Z",
+      "side": 1,
+      "message": "No, the Aspeed AST2600 EVB layer is here: https://github.com/openbmc/meta-aspeed",
+      "range": {
+        "startLine": 4,
+        "startChar": 0,
+        "endLine": 4,
+        "endChar": 50
+      },
+      "revId": "0b7a837986572553d8dfee20a7c014bf14c50f12",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "17d95e51_54ce5217",
+        "filename": "meta-evb-aspeed/meta-evb-ast2600/conf/bblayers.conf.sample",
+        "patchSetId": 3
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1000002
+      },
+      "writtenOn": "2020-12-17T17:35:54Z",
+      "side": 1,
+      "message": "I don\u0027t think python is required to build openbmc anymore.  Can you try building without python?",
+      "range": {
+        "startLine": 13,
+        "startChar": 2,
+        "endLine": 13,
+        "endChar": 42
+      },
+      "revId": "0b7a837986572553d8dfee20a7c014bf14c50f12",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "f0fa01b2_7c86ed56",
+        "filename": "meta-evb-aspeed/meta-evb-ast2600/conf/bblayers.conf.sample",
+        "patchSetId": 3
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1000002
+      },
+      "writtenOn": "2020-12-17T17:35:54Z",
+      "side": 1,
+      "message": "I don\u0027t think this layer has any content.  Is it needed for some reason?",
+      "range": {
+        "startLine": 16,
+        "startChar": 1,
+        "endLine": 16,
+        "endChar": 39
+      },
+      "revId": "0b7a837986572553d8dfee20a7c014bf14c50f12",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "cd3e5e5a_cfb31baf",
+        "filename": "meta-evb-aspeed/meta-evb-ast2600/conf/machine/evb-ast2600-a1.conf",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000002
+      },
+      "writtenOn": "2020-12-17T17:35:54Z",
+      "side": 1,
+      "message": "We already have a machine configuration for the ast2600 EVB here:\n\nhttps://github.com/openbmc/meta-aspeed/blob/master/conf/machine/evb-ast2600.conf\n\nPlease submit your edits for review there.",
+      "revId": "0b7a837986572553d8dfee20a7c014bf14c50f12",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": true
+    }
+  ]
+}
