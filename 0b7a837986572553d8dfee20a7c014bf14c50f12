@@ -108,6 +108,24 @@
       "revId": "0b7a837986572553d8dfee20a7c014bf14c50f12",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "b6c04bf0_38fcc2c3",
+        "filename": "meta-evb-aspeed/meta-evb-ast2600/conf/machine/evb-ast2600-a1.conf",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000272
+      },
+      "writtenOn": "2020-12-18T01:26:57Z",
+      "side": 1,
+      "message": "That will be nice. Currently, the flash layout need to be updated in meta-aspeed or it will complain the u-boot/rofs is too small.",
+      "parentUuid": "cd3e5e5a_cfb31baf",
+      "revId": "0b7a837986572553d8dfee20a7c014bf14c50f12",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": false
     }
   ]
 }
