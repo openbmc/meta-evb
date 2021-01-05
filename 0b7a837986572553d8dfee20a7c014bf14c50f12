@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "7d4a9d2e_3c7a37a3",
+        "filename": "meta-evb-aspeed/meta-evb-ast2600/README.md",
+        "patchSetId": 3
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1000272
+      },
+      "writtenOn": "2021-01-05T10:25:40Z",
+      "side": 1,
+      "message": "Thanks for the wording. I\u0027ll update accordingly.",
+      "parentUuid": "d738302d_7fdbac07",
+      "range": {
+        "startLine": 1,
+        "startChar": 0,
+        "endLine": 1,
+        "endChar": 31
+      },
+      "revId": "0b7a837986572553d8dfee20a7c014bf14c50f12",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "3f1a389a_ac4fb2fe",
         "filename": "meta-evb-aspeed/meta-evb-ast2600/README.md",
         "patchSetId": 3
@@ -45,6 +69,30 @@
       "revId": "0b7a837986572553d8dfee20a7c014bf14c50f12",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "1408aa74_31ee5347",
+        "filename": "meta-evb-aspeed/meta-evb-ast2600/README.md",
+        "patchSetId": 3
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1000272
+      },
+      "writtenOn": "2021-01-05T10:25:40Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "3f1a389a_ac4fb2fe",
+      "range": {
+        "startLine": 4,
+        "startChar": 0,
+        "endLine": 4,
+        "endChar": 50
+      },
+      "revId": "0b7a837986572553d8dfee20a7c014bf14c50f12",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": false
     },
     {
       "key": {
@@ -71,6 +119,30 @@
     },
     {
       "key": {
+        "uuid": "b2d405d9_44e55a4e",
+        "filename": "meta-evb-aspeed/meta-evb-ast2600/conf/bblayers.conf.sample",
+        "patchSetId": 3
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1000272
+      },
+      "writtenOn": "2021-01-05T10:25:40Z",
+      "side": 1,
+      "message": "Although python is removed from obmc-phosphor-image, meta-python is required for native build environment I think.\n\nRemoving it will produce the following error:\nERROR: Layer \u0027networking-layer\u0027 depends on layer \u0027meta-python\u0027, but this layer is not enabled in your configuration",
+      "parentUuid": "17d95e51_54ce5217",
+      "range": {
+        "startLine": 13,
+        "startChar": 2,
+        "endLine": 13,
+        "endChar": 42
+      },
+      "revId": "0b7a837986572553d8dfee20a7c014bf14c50f12",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "f0fa01b2_7c86ed56",
         "filename": "meta-evb-aspeed/meta-evb-ast2600/conf/bblayers.conf.sample",
         "patchSetId": 3
@@ -91,6 +163,30 @@
       "revId": "0b7a837986572553d8dfee20a7c014bf14c50f12",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "48f77d5d_68e88e9b",
+        "filename": "meta-evb-aspeed/meta-evb-ast2600/conf/bblayers.conf.sample",
+        "patchSetId": 3
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1000272
+      },
+      "writtenOn": "2021-01-05T10:25:40Z",
+      "side": 1,
+      "message": "No, I\u0027ll remove this layer.",
+      "parentUuid": "f0fa01b2_7c86ed56",
+      "range": {
+        "startLine": 16,
+        "startChar": 1,
+        "endLine": 16,
+        "endChar": 39
+      },
+      "revId": "0b7a837986572553d8dfee20a7c014bf14c50f12",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": false
     },
     {
       "key": {
@@ -123,6 +219,24 @@
       "side": 1,
       "message": "That will be nice. Currently, the flash layout need to be updated in meta-aspeed or it will complain the u-boot/rofs is too small.",
       "parentUuid": "cd3e5e5a_cfb31baf",
+      "revId": "0b7a837986572553d8dfee20a7c014bf14c50f12",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0c9cdcee_013cd00e",
+        "filename": "meta-evb-aspeed/meta-evb-ast2600/conf/machine/evb-ast2600-a1.conf",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000272
+      },
+      "writtenOn": "2021-01-05T10:25:40Z",
+      "side": 1,
+      "message": "FLASH_SIZE will submit to meta-aspeed/conf/machine/evb-ast2600.conf, and the layout will submit to meta-phosphor/classes/image_types_phosphor.bbclass.",
+      "parentUuid": "b6c04bf0_38fcc2c3",
       "revId": "0b7a837986572553d8dfee20a7c014bf14c50f12",
       "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
       "unresolved": false
