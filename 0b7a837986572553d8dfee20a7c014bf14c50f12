@@ -143,6 +143,30 @@
     },
     {
       "key": {
+        "uuid": "ac458b8f_bebe3433",
+        "filename": "meta-evb-aspeed/meta-evb-ast2600/conf/bblayers.conf.sample",
+        "patchSetId": 3
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1000002
+      },
+      "writtenOn": "2021-01-12T20:43:33Z",
+      "side": 1,
+      "message": "Ok, thx for doing the experiment.\n\nFYI - Python itself (used by the native build env) comes with oe-core (e.g. meta).  meta-python has some extra/obscure python packages.  Apparently meta-networking has some dependencies on one of those packages.  To be honest I\u0027m not sure what we are using out of meta-networking...",
+      "parentUuid": "b2d405d9_44e55a4e",
+      "range": {
+        "startLine": 13,
+        "startChar": 2,
+        "endLine": 13,
+        "endChar": 42
+      },
+      "revId": "0b7a837986572553d8dfee20a7c014bf14c50f12",
+      "serverId": "adbd0a64-1f21-4d83-b585-671fe73cb6e4",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "f0fa01b2_7c86ed56",
         "filename": "meta-evb-aspeed/meta-evb-ast2600/conf/bblayers.conf.sample",
         "patchSetId": 3
